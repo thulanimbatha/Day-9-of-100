@@ -16,9 +16,9 @@ while not bid_end:
     other_bids = input("Is the any other bidders (type 'yes' or 'no')? ").lower()
 
     if other_bids == "yes":
-        name = input("What is your name? ")
-        bid = float(input("What is your bid? R"))
-        auc_bid[name] = bid
+        name = input("What is your name? ")         # |
+        bid = float(input("What is your bid? R"))   # | REPETITIVE BUT STILL OK
+        auc_bid[name] = bid                         # |
         bid_end = False
     elif other_bids == "no":
         bid_end = True
