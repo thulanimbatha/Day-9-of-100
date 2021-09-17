@@ -1,6 +1,7 @@
 # day project
 auc_bid = {}    # empty dict
 bid_end = False # while loop
+highest_bid = -1    # for loop
 
 '''INITIAL KEY-VALUE PAIR IN DICT'''
 name = input("What is your name? ")
@@ -21,4 +22,7 @@ while not bid_end:
         bid_end = True
 print(auc_bid)
 '''DETERMINE WHICH KEY HAS THE HIGHEST VALUE'''
-    
+for name in auc_bid:
+    if auc_bid[name] > highest_bid:
+        highest_bid = auc_bid[name]
+print(f"The winner is: ")
