@@ -2,6 +2,7 @@
 auc_bid = {}    # empty dict
 bid_end = False # while loop
 highest_bid = -1    # for loop
+highest_bidder = ""
 
 '''INITIAL KEY-VALUE PAIR IN DICT'''
 name = input("What is your name? ")
@@ -25,4 +26,5 @@ print(auc_bid)
 for name in auc_bid:
     if auc_bid[name] > highest_bid:
         highest_bid = auc_bid[name]
-print(f"The winner is: ")
+        highest_bidder = name
+print(f"The winner is: {highest_bidder}")
