@@ -1,4 +1,5 @@
 # day project
+
 auc_bid = {}    # empty dict
 bid_end = False # while loop
 highest_bid = -1    # for loop
@@ -6,7 +7,7 @@ highest_bidder = ""
 
 '''INITIAL KEY-VALUE PAIR IN DICT'''
 name = input("What is your name? ")
-bid = float(input("What is your bid? "))
+bid = float(input("What is your bid? R"))
 # add initial kv in dict
 auc_bid[name] = bid
 print(auc_bid)
@@ -16,7 +17,7 @@ while not bid_end:
 
     if other_bids == "yes":
         name = input("What is your name? ")
-        bid = float(input("What is your bid? "))
+        bid = float(input("What is your bid? R"))
         auc_bid[name] = bid
         bid_end = False
     elif other_bids == "no":
@@ -27,4 +28,4 @@ for name in auc_bid:
     if auc_bid[name] > highest_bid:
         highest_bid = auc_bid[name]
         highest_bidder = name
-print(f"The winner is: {highest_bidder}")
+print(f"The winner is: {highest_bidder} with R{highest_bid}")
